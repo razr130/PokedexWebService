@@ -74,6 +74,41 @@ namespace PokemonAPI.Controllers
 
         }
 
+        [HttpPost]
+        [Route("PostPokedex/upload_file")]
+        public ActionResult upload_file(IEnumerable<HttpPostedFileBase> image)
+        {
+            Respon res = new Respon();
+            string filepath = "";
+            try { 
+            if (image.Count() > 0)
+            {
+                foreach (var pic in image)
+                {
+                    if (pic != null)
+                    {
+                        filepath = Path.Combine(HttpContext.Server.MapPath("~/Content/Images"), pic.FileName);
+                        pic.SaveAs(filepath);
+                    }
+                }
+            }
+                res.error = "0";
+                res.success = "1";
+                res.tag = "upload";
+                res.token = "success upload";
+                return Json(res);
+            }
+            catch(Exception x)
+            {
+                res.error = "1";
+                res.success = "0";
+                res.tag = "upload";
+                res.token = x.ToString();
+                return Json(res);
+            }
+
+        }
+
 
     }
 }
