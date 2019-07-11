@@ -87,15 +87,23 @@ namespace PokemonAPI.Controllers
                 {
                     if (pic != null)
                     {
-                        filepath = Path.Combine(HttpContext.Server.MapPath("~/Content/Images"), pic.FileName);
-                        pic.SaveAs(filepath);
+                            filepath = Path.Combine(HttpContext.Server.MapPath("~/Content/Images"), pic.FileName);
+                            pic.SaveAs(filepath);
+                            res.error = "0";
+                            res.success = "1";
+                            res.tag = "upload";
+                            res.token = "success upload";
                     }
                 }
             }
-                res.error = "0";
-                res.success = "1";
-                res.tag = "upload";
-                res.token = "success upload";
+                else
+                {
+                    res.error = "1";
+                    res.success = "0";
+                    res.tag = "upload";
+                    res.token = "image is empty";
+                }
+                
                 return Json(res);
             }
             catch(Exception x)
