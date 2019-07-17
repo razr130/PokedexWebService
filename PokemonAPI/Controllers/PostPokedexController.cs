@@ -46,6 +46,7 @@ namespace PokemonAPI.Controllers
                     {                        
                         filepath = Path.Combine(HttpContext.Server.MapPath("~/Content/Images"), pic.FileName);
                         pic.SaveAs(filepath);
+                        pokedata.image = pic.FileName;
                     }
                 }
             }
