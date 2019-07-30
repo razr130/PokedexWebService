@@ -188,8 +188,10 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MoveController.cs" />
     <Compile Include="Controllers\PokedexController.cs" />
     <Compile Include="Controllers\PostPokedexController.cs" />
+    <Compile Include="DAL\MoveDAL.cs" />
     <Compile Include="DAL\TypeDAL.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="DAL\PokedexDAL.cs" />
@@ -198,6 +200,7 @@
     </Compile>
     <Compile Include="Models\bodyparameter.cs" />
     <Compile Include="Models\move.cs" />
+    <Compile Include="Models\movejson.cs" />
     <Compile Include="Models\pokedex.cs" />
     <Compile Include="Models\pokedexjson.cs" />
     <Compile Include="Models\PokedexModel.cs" />
@@ -265,6 +268,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\Images\" />
+    <Folder Include="Views\Move\" />
     <Folder Include="Views\PostPokedex\" />
   </ItemGroup>
   <ItemGroup>

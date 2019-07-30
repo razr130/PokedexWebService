@@ -25,6 +25,9 @@ namespace PokemonAPI.Models
         public string abilities { get; set; }
 
         public string[] type { get; set; }
+
         public stat stat { get; set; }
+
+        public int? req_move { get; set; }
     }
 }

@@ -36,6 +36,8 @@ namespace PokemonAPI.Models
         [StringLength(20)]
         public string abilities { get; set; }
 
+        public int? req_move { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<pokemon_type> pokemon_type { get; set; }
 

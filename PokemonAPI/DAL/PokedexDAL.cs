@@ -17,6 +17,11 @@ namespace PokemonAPI.DAL
            
             return result;
         }
+        public IQueryable<pokedex> get_pokedex_byid(string id)
+        {
+            var result = from c in db.pokedexes where c.pokedex_id == id orderby c.pokedex_id ascending select c;
+            return result;
+        }
 
         public string[] addpokedex(pokedex poke, stat stat, pokemon_type[] tipe)
         {
