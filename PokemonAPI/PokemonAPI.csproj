@@ -191,6 +191,7 @@
     <Compile Include="Controllers\MoveController.cs" />
     <Compile Include="Controllers\PokedexController.cs" />
     <Compile Include="Controllers\PostPokedexController.cs" />
+    <Compile Include="Controllers\TypeController.cs" />
     <Compile Include="DAL\MoveDAL.cs" />
     <Compile Include="DAL\TypeDAL.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
@@ -209,6 +210,7 @@
     <Compile Include="Models\Respon.cs" />
     <Compile Include="Models\stat.cs" />
     <Compile Include="Models\type.cs" />
+    <Compile Include="Models\typejson.cs" />
     <Compile Include="Models\typename.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -270,6 +272,7 @@
     <Folder Include="Content\Images\" />
     <Folder Include="Views\Move\" />
     <Folder Include="Views\PostPokedex\" />
+    <Folder Include="Views\Type\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

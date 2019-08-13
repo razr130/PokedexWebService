@@ -10,6 +10,14 @@ namespace PokemonAPI.DAL
     {
         private PokedexModel db = new PokedexModel();
 
+        public IQueryable<type> get_type()
+        {
+            var result = from c in db.types
+                         orderby c.type_id ascending
+                         select c;
+            return result;
+        }
+
         public string get_type_name(int? id)
         {
             var name = (from c in db.types where c.type_id == id select c.type1).SingleOrDefault();
